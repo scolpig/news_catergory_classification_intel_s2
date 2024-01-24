@@ -1,3 +1,5 @@
+#님들아 크로링 작업은 이 파일로 해주삼
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options as ChromeOptions
