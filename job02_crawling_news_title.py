@@ -20,7 +20,7 @@ options.add_argument('lang=ko_KR')
 
 service = ChromeService(executable_path=ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
-pages = [105, 105, 105, 81, 105, 81]
+pages = [101, 101, 101, 81, 101, 81]
 
 df_titles = pd.DataFrame()
 for l in range(6):
@@ -48,6 +48,7 @@ for l in range(6):
             df_section_title = pd.DataFrame(titles, columns=['titles'])
             df_section_title['category'] = category[l]
             df_section_title.to_csv('./crawling_data/data_{}_{}.csv'.format(l, k))
+            titles = []
 driver.close()
 
 
